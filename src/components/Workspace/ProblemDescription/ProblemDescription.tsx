@@ -3,6 +3,7 @@ import RectangleSkeleton from "@/components/Skeletons/RectangleSkeleton";
 import { auth, firestore } from "@/firebase/firebase";
 import { DBProblem, Problem } from "@/utils/types/problem";
 import { arrayRemove, arrayUnion, doc, getDoc, runTransaction, updateDoc } from "firebase/firestore";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { AiFillLike, AiFillDislike, AiOutlineLoading3Quarters, AiFillStar } from "react-icons/ai";
@@ -232,7 +233,7 @@ const ProblemDescription: React.FC<ProblemDescriptionProps> = ({ problem, _solve
 							{problem.examples.map((example, index) => (
 								<div key={example.id}>
 									<p className='font-medium '>Example {index + 1}: </p>
-									{example.img && <img src={example.img} alt='' className='mt-3' />}
+									{example.img && <Image src={example.img} alt='' className='mt-3' />}
 									<div className='example-card'>
 										<pre>
 											<strong className=''>Input: </strong> {example.inputText}

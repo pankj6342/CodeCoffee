@@ -18,7 +18,7 @@ export default function Home() {
 					className='text-2xl text-center text-gray-700 dark:text-gray-400 font-medium
 					uppercase mt-10 mb-5'
 				>
-					Let's Convert some more Coffee to Code! 🍵
+					Lets Convert some more Coffee to Code! 🍵
 				</h1>
 				<div className='relative overflow-x-auto mx-auto px-6 pb-10'>
 					{loadingProblems && (
